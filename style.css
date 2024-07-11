@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.w-xl { width: 100%; }
+.w-l { width: 80%; }
+.w-m { width: 60%; }
+.w-s { width: 40%; }
+
+
+.utikoltseg {
+    width: 50%;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px #ddd;
+}
+
+.utikoltseg-cim {
+    font-size: 20px;
+}
+
+.elszamolas-cim {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.inputmezok {
+    margin: 10px 0;
+    width: 100%;
+    border-bottom: 2px solid #ddd;
+}
+
+.elszamolas-wrapper {
+    margin-bottom: 15px;
+}
+
+.wrapper {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-left: 40px;
+}
+
+
+
+.eredmeny {
+    flex: 1 1 60px;
+    margin-bottom: 7px;
+}
+
+.input-wrapper {
+    flex: 1 1 60px;
+}
+
+.mezo {
+    padding: 3px 0 3px 0;
+    margin-bottom: 7px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.forras {
+    display: block;
+    margin-left: 45%;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+.nyomtatas {
+    margin: 40px 0;
+    height: 150px;
+    position: relative;
+    display: none;
+}
+
+.nyomtatas p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.alair-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+
+
+
+#datum {
+    margin-left: 10px;
+}
+
+@media print 
+{
+    .utikoltseg {
+        width: 100%;
+    }
+
+    .nyomtatas {
+        display: block;
+    }
+
+    .btn,
+    .forras {
+        display: none;
+    }
+}

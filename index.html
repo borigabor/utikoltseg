@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Útiköltség</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="utikoltseg">
+        <h3 class="utikoltseg-cim">Útiköltség-elszámolás</h3>
+        <form class="inputmezok" id="elszamolas">
+
+            <div class="elszamolas-wrapper">
+
+                <h6 class="elszamolas-cim">Személyes adatok</h6>
+
+                <div class="wrapper">
+                    <label for="nev" class="eredmeny">Név:</label>
+                    <div class="input-wrapper">
+                        <input type="text"  class="mezo w-xl" id="nev">
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <label for="lakcim" class="eredmeny">Lakcím:</label>
+                    <div class="input-wrapper">
+                    <input type="text"  class="mezo w-xl" id="lakcim">
+                </div>
+                </div>
+                <div class="wrapper">
+                    <label for="szul_datum" class="eredmeny">Születési dátum:</label>
+                    <div class="input-wrapper">
+                        <input type="date" class="mezo w-l" id="szul_datum">
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="elszamolas-wrapper">
+
+            <h6 class="elszamolas-cim">Gépjármú-és üzemanyagadatok</h6>
+
+            <div class="wrapper">
+                <label for="gepjarmu" class="eredmeny">Gépjármű gyártmánya,típusa:</label>
+                <div class="input-wrapper">
+                    <input type="text"  class="mezo w-m" id="gepjarmu">
+                </div>
+            </div>
+            <div class="wrapper">
+                <label for="uzemanyag" class="eredmeny">Üzemanyag fajtája:</label>
+                <div class="input-wrapper">
+                    <select id="uzemanyag" class="mezo w-s">
+                        <option value="0" selected></option>
+                        <option value="1">Benzin</option>
+                        <option value="2">Gázolaj</option>
+                    </select>
+                </div>
+            </div>
+            <div class="wrapper">
+                <label for="szul_datum" class="eredmeny">Fogyasztái norma:</label>
+                <div class="input-wrapper">
+                    <select id="fogyasztas" class="mezo w-xl">
+                        <option value="0"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="wrapper">
+                <label for="utazas" class="eredmeny">Utazás dátuma:</label>
+                <div class="input-wrapper">
+                    <input type="date" id="utazas" class="mezo w-l">
+                </div>
+            </div>
+            <div class="wrapper">
+                <label for="egysegar" class="eredmeny">Üzemanyag egységára:</label>
+                <div class="input-wrapper">
+                    <input type="num" class="mezo w-m" id="egysegar" placeholder="...">
+                    Ft/l
+                </div>
+            </div>
+            <span class="forras">Forrás: <a href="https://nav.gov.hu/ugyfeliranytu/uzemanyag/">https://nav.gov.hu/ugyfeliranytu/uzemanyag/</a></span>
+    </div>
+
+    <div class="elszamolas-wrapper">
+
+        <h6 class="elszamolas-cim">A megtett út adatai:</h6>
+
+        <div class="wrapper">
+            <label for="kiindulas" class="eredmeny">Kiindulás helye:</label>
+            <div class="input-wrapper">
+                <input type="text"  class="mezo w-xl" id="kiindulas">
+            </div>
+        </div>
+        <div class="wrapper">
+            <label for="uticel" class="eredmeny">Úticél:</label>
+            <div class="input-wrapper">
+                <input type="text"  class="mezo w-xl" id="uticel">
+            </div>
+        </div>
+        <div class="wrapper">
+            <label for="uticel-t" class="eredmeny">További úticél:</label>
+            <div class="input-wrapper">
+                <input type="text"  class="mezo w-xl" id="uticel-t">
+            </div>
+        </div>
+        <div class="wrapper">
+            <label for="tavolsag" class="eredmeny">Összesen megtett távolság<br> Google Maps alapján:</label>
+            <div class="input-wrapper">
+                <input type="text"  class="mezo w-m" id="tavolsag">
+                km
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <label for="" class="eredmeny"></label>
+            <div class="input-wrapper">
+                <button type="submit" class="btn">Ellenőrzés és számítás</button>
+            </div>
+        </div>
+
+</div>
+
+        </form>
+
+        <div class="wrapper">
+            <span class="eredmeny">Útiköltség:</span>
+            <div class="input-wrapper"><span class="eredmeny-utikolsteg"></span></div>
+        </div>
+        <div class="wrapper">
+            <span class="eredmeny">Amortizáció:</span>
+            <div class="input-wrapper"><span class="eredmeny-amortizacio"></span></div>
+        </div>
+        <div class="wrapper">
+            <span class="eredmeny"><strong>Összes elszámolható költség:</strong></span>
+            <div class="input-wrapper"><span class="eredmeny-osszes"></span></div>
+        </div>
+        <div class="wrapper">
+            <label for="" class="eredmeny"></label>
+            <div class="input-wrapper"><button type="button" disabled class="btn" id="nyomtat-btn" >Nyomtatás</button></div>
+        </div>
+
+        <div class="nyomtatas">
+            <p class="nyomtat">Aláírásommal igazolom, hogy az adatok a valóságnek megfelelnek.</p>
+    
+            <p class="alair_datum">...............................................................,<span id="datum"></span></p>
+    
+            <div class="alair-wrapper">
+                <p class="alair_nev">................................................................</p>
+                <p class="alairas">aláírás</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+   
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
